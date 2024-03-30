@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/common.css" />
+  <style>
+    form { width: 600px; margin: auto; padding: 5px 20px; box-shadow: 2px 2px 5px gray; }
+    td { min-width: 100; padding: 5px; }
+    td:nth-child(1) { text-align: right; }
+    button { margin: 5px 0 20px 20px; }
+  </style>
+</head>
+<body>
+<div class="container">
+ <form method="post" th:object="${movie}">
+    <h1 th:text="${movie.id > 0 ? '영화 수정' : '영화 등록'}"></h1>
+    <table>
+      <tr>
+        <td>제목:</td>
+        <td><input type="text" th:field="*{title}" /></td>
+      </tr>
+      <tr>
+        <td>감독:</td>
+        <td><input type="text" th:field="*{director}" /></td>
+      </tr>
+      <tr>
+        <td>장르:</td>
+        <td><select th:field="*{genreId}">
+              <option th:each="dt : ${ genres }"
+                      th:value="${ dt.id }" th:text="${ dt.title }">
+              </option>
+            </select>
+      </tr>
+      <tr>
+        <td>년도:</td>
+        <td><input type="text" th:field="*{year}" /></td>
+      </tr>
+      <tr>
+        <td>국가:</td>
+        <td><input type="text" th:field="*{country}" /></td>
+      </tr>
+    </table>
+    <hr />
+    <div>
+      <button type="submit" class="btn">저장</button>
+      <a th:if="${ movie.id > 0 }" th:href="${ 'delete?id=' + movie.id }"
+         class="btn" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
+      <a href="list" class="btn">목록으로</a>
+    </div>
+  </form>
+</div>
+</body>
+</html>
+
