@@ -30,6 +30,7 @@
       <tr>
         <td>학과:</td>
         <td><select th:field="*{departmentId}">
+        	  <option value="0">학과를 선택하세요</option>
               <option th:each="dt : ${ departments }"
                       th:value="${ dt.id }" th:text="${ dt.name }">
               </option>
