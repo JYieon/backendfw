@@ -3690,3 +3690,268 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:57:37.652
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:57:37.697
+!MESSAGE Boot project REMOVED: mybatis5
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:57:38.020
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:57:38.391
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:57:38.434
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:58:20.198
+!MESSAGE Classpath changed for project: mybatis6
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:58:20.214
+!MESSAGE Boot project ADDED: mybatis6
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:58:21.941
+!MESSAGE Classpath changed for project: mybatis6
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-21 23:58:22.763
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-21 23:58:22.764
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-21 23:58:22.774
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-21 23:58:22.776
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-21 23:58:22.788
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-04-21 23:58:22.793
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:58:24.111
+!MESSAGE Classpath changed for project: mybatis6
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:58:25.755
+!MESSAGE Classpath changed for project: mybatis6
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-04-21 23:58:26.124
+!MESSAGE java.util.concurrent.CancellationException
+!STACK 0
+java.util.concurrent.CompletionException: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:332)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:347)
+	at java.base/java.util.concurrent.CompletableFuture$UniApply.tryFire(CompletableFuture.java:636)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:510)
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2480)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingBase.cancel(LSPLinkedEditingBase.java:85)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingBase.collectLinkedEditingRanges(LSPLinkedEditingBase.java:53)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.updateLinkedEditing(LSPLinkedEditingReconcilingStrategy.java:165)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.updateLinkedEditing(LSPLinkedEditingReconcilingStrategy.java:154)
+	at org.eclipse.lsp4e.operations.linkedediting.LSPLinkedEditingReconcilingStrategy.lambda$0(LSPLinkedEditingReconcilingStrategy.java:132)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4046)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3662)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:126)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:100)
+	at org.eclipse.core.runtime.SubMonitor$RootInfo.isCanceled(SubMonitor.java:278)
+	at org.eclipse.core.runtime.SubMonitor.isCanceled(SubMonitor.java:661)
+	at org.eclipse.core.runtime.ProgressMonitorWrapper.isCanceled(ProgressMonitorWrapper.java:111)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:101)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:154)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:286)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:214)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:95)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:342)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:124)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2403)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2448)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2478)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:131)
+	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:76)
+	at org.eclipse.ui.internal.editors.text.WorkspaceOperationRunner.run(WorkspaceOperationRunner.java:66)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.executeOperation(TextFileDocumentProvider.java:461)
+	at org.eclipse.ui.editors.text.TextFileDocumentProvider.synchronize(TextFileDocumentProvider.java:1149)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.initializeSourceDocument(MavenPomEditor.java:400)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.addFallbackEditors(MavenPomEditor.java:364)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.addPages(MavenPomEditor.java:337)
+	at org.eclipse.ui.forms.editor.FormEditor.createPages(FormEditor.java:143)
+	at org.eclipse.ui.part.MultiPageEditorPart.createPartControl(MultiPageEditorPart.java:333)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:158)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor.createPartControl(CompatibilityEditor.java:96)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:365)
+	at jdk.internal.reflect.GeneratedMethodAccessor117.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:976)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:938)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:138)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:385)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:311)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:203)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:91)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:42)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:132)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:995)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:763)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:728)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:712)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:105)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4802)
+	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:208)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:206)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
+	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:661)
+	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:625)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:796)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:401)
+	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1270)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3233)
+	at org.eclipse.ui.internal.WorkbenchPage.lambda$11(WorkbenchPage.java:3123)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3121)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3091)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3082)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:548)
+	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:508)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:367)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:172)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:288)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:254)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:366)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$3.open(PackageExplorerPart.java:545)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:800)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:797)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1115)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:296)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:331)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4273)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1066)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4071)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:648)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:342)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:555)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+Caused by: java.util.concurrent.CancellationException
+	at java.base/java.util.concurrent.CompletableFuture.cancel(CompletableFuture.java:2478)
+	... 132 more
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:58:28.643
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:58:30.102
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:58:30.111
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:58:31.594
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-21 23:58:31.598
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:58:46.461
+!MESSAGE Classpath changed for project: mybatis6
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:59:53.700
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-21 23:59:53.745
+!MESSAGE Boot project ADDED: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-22 00:00:24.669
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-22 00:00:24.693
+!MESSAGE Boot project REMOVED: mybatis5
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:00:27.055
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:00:27.339
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:00:27.356
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:00:27.608
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:00:27.630
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-22 00:08:37.926
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-22 00:08:37.941
+!MESSAGE Boot project ADDED: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-22 00:09:37.597
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-04-22 00:09:37.607
+!MESSAGE Boot project REMOVED: mybatis5
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:09:40.174
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:09:40.449
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:09:40.465
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:09:40.740
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-04-22 00:09:40.755
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
