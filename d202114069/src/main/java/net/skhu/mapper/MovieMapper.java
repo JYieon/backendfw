@@ -24,7 +24,7 @@ public interface MovieMapper {
 
     @Insert("""
         INSERT movie (title, director, genreId, year, country)
-        VALUES (#{title}, #{director}, #{genreId}, #{year}, #{country} """)
+        VALUES (#{title}, #{director}, #{genreId}, #{year}, #{country}) """)
     @Options(useGeneratedKeys=true, keyProperty="id")
     void insert(Movie movie);
 
