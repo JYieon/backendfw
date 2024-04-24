@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/common.css" />
+  <script type="text/javascript" src="/common.js"></script>
+  <style>
+    a.btn { float: right; margin-top: -40px; }
+  </style>
+</head>
+<body onload="pagination()">
+<div class="container">
+  <h1>학생목록</h1>
+  <a th:href="${ 'create?' + pagination.queryString }" class="btn">책등록</a>  
+  <table class="list">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>제목</th>
+        <th>작가</th>
+        <th>종류</th>
+        <th>가격</th>
+        <th>출판사</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="st : ${ books }" 
+          th:href="${ 'edit?id=' + st.id + '&' + pagination.queryString }"
+          onclick="onClickHref(event)">
+        <td th:text="${ st.id }"></td>
+        <td th:text="${ st.author }"></td>
+        <td th:text="${ st.title }"></td>
+        <td th:text="${ st.categoryName }"></td>
+        <td th:text="${ st.price }"></td>
+        <td th:text="${ st.publisher }"></td>
+      </tr>
+    </tbody>
+  </table>  
+  <div class="pagination" th:data-record-count="${pagination.recordCount}"
+       th:data-page-size="${pagination.sz}" th:data-current-page="${pagination.pg}"></div>
+</div>
+</body>
+</html>
+
