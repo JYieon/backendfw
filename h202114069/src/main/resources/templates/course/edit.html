@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/common.css" />
+  <style>
+    form { width: 600px; margin: auto; padding: 5px 20px; box-shadow: 2px 2px 5px gray; }
+    div.table { display: table; }
+    div.row { display: table-row; }
+    div.cell { display: table-cell; padding: 5px; }
+    div.cell:nth-child(1) { width: 100; text-align: right; vertical-align: top; }
+    div.buttons { margin: 1em; }
+  </style>
+</head>
+<body>
+<div class="container">
+ <form method="post" th:object="${courseEdit}">
+    <h1 th:text="${courseEdit.id > 0 ? '강좌 수정' : '강좌 등록'}"></h1>
+    <div class="table">
+      <div class="row">
+        <div class="cell">년도:</div>
+        <div class="cell">
+           <input type="text" th:field="*{year}" />
+           <div class="error" th:errors="*{year}"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">학기:</div>
+        <div class="cell">
+          <input type="text" th:field="*{semester}" />
+          <div class="error" th:errors="*{semester}"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">이수구분:</div>
+        <div class="cell">
+          <input type="text" th:field="*{gubun}" />
+          <div class="error" th:errors="*{gubun}"></div>
+        </div>
+         </div>
+      </div>
+      <div class="row">
+        <div class="cell">강좌코드:</div>
+        <div class="cell">
+          <input type="text" th:field="*{code}" />
+          <div class="error" th:errors="*{code}"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">강좌명:</div>
+        <div class="cell">
+          <input type="text" th:field="*{title}" />
+          <div class="error" th:errors="*{title}"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="cell">담당교수:</div>
+        <div class="cell">
+          <select th:field="*{professorId}">
+            <option value="0">학과를 선택하세요</option>
+            <option th:each="dt : ${ professors }"
+                    th:value="${ dt.id }" th:text="${ dt.name }">
+            </option>
+          </select>
+          <div class="error" th:errors="*{professorId}"></div>
+      </div>
+      <div class="row">
+        <div class="cell">시간:</div>
+        <div class="cell">
+          <input type="text" th:field="*{sigan}" />
+          <div class="error" th:errors="*{sigan}"></div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="buttons">
+      <button type="submit" class="btn" 
+              name="cmd" value="save">저장</button>
+      <button type="submit" class="btn" 
+              th:if="${ courseEdit.id > 0 }"
+              onclick="return confirm('삭제하시겠습니까?')"
+              name="cmd" value="delete">삭제</button>
+      <a th:href="${ 'list?' + pagination.queryString }" class="btn">목록으로</a>
+    </div>
+    <div class="error" th:errors="${courseEdit}"></div>
+  </form>
+</div>
+</body>
+</html>
+
