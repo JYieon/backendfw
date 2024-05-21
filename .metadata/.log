@@ -6122,3 +6122,102 @@ java.lang.InterruptedException
 
 !ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:07:21.690
 !MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:14:12.327
+!MESSAGE Classpath changed for project: jpa2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:14:12.331
+!MESSAGE Boot project REMOVED: jpa2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:14:12.632
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:14:12.883
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:14:12.904
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:17:44.958
+!MESSAGE Classpath changed for project: jpa3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:17:44.973
+!MESSAGE Boot project ADDED: jpa3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:17:47.076
+!MESSAGE Classpath changed for project: jpa3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:17:47.784
+!MESSAGE Classpath changed for project: jpa3
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:17:47.861
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:17:47.874
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:25:24.980
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:29:53.594
+!MESSAGE Classpath changed for project: jpa3
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:29:53.602
+!MESSAGE Boot project REMOVED: jpa3
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:29:53.816
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:29:54.006
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:29:54.015
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:29:54.231
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 22:29:54.263
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:29:54.756
+!MESSAGE Classpath changed for project: jpa2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-21 22:29:54.784
+!MESSAGE Boot project ADDED: jpa2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:06:34.556
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:06:34.726
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:06:34.736
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:09:02.321
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:09:02.490
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:09:02.500
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:09:15.310
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:09:15.493
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:09:15.520
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:16:26.971
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:16:27.135
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-21 23:16:27.144
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" th:href="@{/common.css}" />
+  <script type="text/javascript" th:src="@{/common.js}"></script>
+  <style>
+    a.btn { float: right; margin-top: -40px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>책목록</h1>
+  <a th:href="${ 'create' }" class="btn blue">책등록</a>  
+  <table class="list">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>제목</th>
+        <th>저자</th>
+        <th>카테고리</th>
+        <th>가격</th>
+        <th>출판사</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="st : ${ books }" 
+          th:href="${ 'edit?id=' + st.id }">
+        <td th:text="${ st.id }"></td>
+        <td th:text="${ st.title }"></td>
+        <td th:text="${ st.author }"></td>
+        <td th:text="${ st.category.name }"></td>
+        <td th:text="${ st.price }"></td>
+        <td th:text="${ st.publisher }"></td>
+      </tr>
+    </tbody>
+  </table>  
+</div>
+</body>
+</html>
+
