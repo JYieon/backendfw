@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/common.css" />
+  <style>
+    a.btn { float: right; margin-top: -40px; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>강좌목록</h1>
+  <a href="create" class="btn">강좌등록</a>
+  <table class="list">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>년도</th>
+        <th>학기</th>
+        <th>이수구분</th>
+        <th>과목코드</th>
+        <th>강좌명</th>
+        <th>담당교수</th>
+        <th>시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="course : ${ courses }">
+        <td th:text="${ course.id }"></td>
+        <td th:text="${ course.year }"></td>
+        <td th:text="${ course.semester }"></td>
+        <td th:text="${ course.gubun }"></td>
+        <td th:text="${ course.code }"></td>
+        <td><a th:text="${ course.title }" th:href="${ 'edit?id=' + course.id }"></a></td>
+        <td th:text="${ course.professor.name }"></td>
+        <td th:text="${ course.sigan }"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+</html>
+
