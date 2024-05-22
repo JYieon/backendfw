@@ -4,63 +4,92 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import jakarta.validation.Valid;
 import net.skhu.entity.Category;
 import net.skhu.entity.Book;
-import net.skhu.repository.CategoryRepository;
-import net.skhu.repository.BookRepository;
+import net.skhu.model.Pagination;
+import net.skhu.model.BookEdit;
+import net.skhu.service.CategoryService;
+import net.skhu.service.BookService;
+
 
 @Controller
 @RequestMapping("book")
 public class BookController {
 
-    @Autowired BookRepository bookRepository;
-    @Autowired CategoryRepository categoryRepository;
+    @Autowired BookService bookService;
+    @Autowired CategoryService categoryService;
 
     @RequestMapping("list")
-    public String list(Model model) {
-        List<Book> books = bookRepository.findAll();
+    public String list(Model model, Pagination pagination) {
+        List<Book> books = bookService.findAll(pagination);
         model.addAttribute("books", books);
         return "book/list";
     }
 
     @GetMapping("create")
-    public String create(Model model) {
+    public String create(Model model, Pagination pagination) {
         Book book = new Book();
-        List<Category> categorys = categoryRepository.findAll();
+        List<Category> categorys = categoryService.findAll();
         model.addAttribute("book", book);
         model.addAttribute("categorys", categorys);
         return "book/edit";
     }
 
     @PostMapping("create")
-    public String create(Model model, Book book) {
-    	bookRepository.save(book);
-        return "redirect:list";
+    public String create(Model model, Pagination pagination,
+            @Valid BookEdit bookEdit, BindingResult bindingResult) {
+        try {
+            bookService.insert(bookEdit, bindingResult, pagination);
+            return "redirect:list?" + pagination.getQueryString();
+        }
+        catch (Exception e) {
+            model.addAttribute("categorys", categoryService.findAll());
+            bindingResult.rejectValue("", null, "등록할 수 없습니다.");
+            return "book/edit";
+        }
     }
 
+
     @GetMapping("edit")
-    public String edit(Model model, @RequestParam("id") int id) {
-        Book book = bookRepository.findById(id).get();
-        List<Category> categorys = categoryRepository.findAll();
-        model.addAttribute("book", book);
+    public String edit(Model model, int id, Pagination pagination) {
+        BookEdit bookEdit = bookService.findOne(id);
+        List<Category> categorys = categoryService.findAll();
+        model.addAttribute("bookEdit", bookEdit);
         model.addAttribute("categorys", categorys);
         return "book/edit";
     }
 
+
     @PostMapping(value="edit", params="cmd=save")
-    public String edit(Model model, Book book) {
-    	bookRepository.save(book);
-        return "redirect:list";
+    public String edit(Model model, Pagination pagination,
+            @Valid BookEdit bookEdit, BindingResult bindingResult) {
+        try {
+            bookService.update(bookEdit, bindingResult);
+            return "redirect:list?" + pagination.getQueryString();
+        }
+        catch (Exception e) {
+            model.addAttribute("categorys", categoryService.findAll());
+            bindingResult.rejectValue("", null, "수정할 수 없습니다.");
+            return "book/edit";
+        }
     }
 
     @PostMapping(value="edit", params="cmd=delete")
-    public String delete(Model model, @RequestParam("id") int id) {
-    	bookRepository.deleteById(id);
-        return "redirect:list";
+    public String delete(Model model, Pagination pagination,
+            BookEdit bookEdit, BindingResult bindingResult) {
+        try {
+            bookService.delete(bookEdit.getId());
+            return "redirect:list?" + pagination.getQueryString();
+        }
+        catch (Exception e) {
+            model.addAttribute("categorys", categoryService.findAll());
+            bindingResult.rejectValue("", null, "삭제할 수 없습니다.");
+            return "book/edit";
+        }
     }
 }
-

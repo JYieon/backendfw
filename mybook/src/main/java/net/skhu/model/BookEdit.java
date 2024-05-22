@@ -27,5 +27,7 @@ public class BookEdit {
     
     @NotEmpty @NotBlank
     String publisher;
+    
+    
 }
 
