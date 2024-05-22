@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="/common.css" />
+  <script type="text/javascript" src="/common.js"></script>
+  <style>
+    a.btn { float: right; margin-top: -40px; }
+  </style>
+</head>
+<body onload="pagination()">
+<div class="container">
+  <h1>제품목록</h1>
+  <a th:href="${ 'create?' + pagination.queryString }" class="btn">제품등록</a>  
+  <table class="list">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>제품명</th>
+        <th>카테고리</th>
+        <th>가격</th>
+        <th>수량</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr th:each="product : ${ products }" 
+          th:href="${ 'edit?id=' + product.id + '&' + pagination.queryString }"
+          onclick="onClickHref(event)">
+        <td th:text="${ product.id }"></td>
+        <td th:text="${ product.name }"></td>
+        <td th:text="${ product.category.title }"></td>
+        <td th:text="${ product.price }"></td>
+        <td th:text="${ product.quantity }"></td>
+      </tr>
+    </tbody>
+  </table>  
+  <div class="pagination" th:data-record-count="${pagination.recordCount}"
+       th:data-page-size="${pagination.sz}" th:data-current-page="${pagination.pg}"></div>
+</div>
+</body>
+</html>
