@@ -6621,3 +6621,454 @@ java.util.concurrent.TimeoutException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:651)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:588)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:14.643
+!MESSAGE Classpath changed for project: jpa6a
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-05-22 10:59:14.647
+!MESSAGE ExecutionException occurred during shutdown of EndpointProxy for org.eclipse.lsp4j.jsonrpc.RemoteEndpoint@51db3f17
+!STACK 0
+java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$10(LanguageServerWrapper.java:492)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165)
+Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$3(LanguageServerWrapper.java:309)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
+	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
+	at jdk.proxy18/jdk.proxy18.$Proxy61.shutdown(Unknown Source)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$10(LanguageServerWrapper.java:490)
+	... 7 more
+Caused by: java.io.IOException: 파이프가 닫히는 중입니다
+	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
+	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:349)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
+	... 12 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 10:59:14.648
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858\jre\bin\javaw.exe
+-cp
+C:\JAVA\sts-4.21.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.51.0.202312011752\servers\spring-boot-language-server\BOOT-INF\classes;C:\JAVA\sts-4.21.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.51.0.202312011752\servers\spring-boot-language-server\BOOT-INF\lib\*
+-Dsts.lsp.client=eclipse
+-Dlsp.completions.indentation.enable=true
+-Xmx1024m
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-Dspring.config.location=file:C:\JAVA\sts-4.21.0.RELEASE\plugins\org.springframework.tooling.boot.ls_1.51.0.202312011752\servers\spring-boot-language-server\BOOT-INF\classes\application.properties
+-XX:ErrorFile=C:/backend/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1716343154644
+org.springframework.ide.vscode.boot.app.BootLanguageServerBootApp
+--languageserver.hover-timeout=225
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:14.663
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:14.664
+!MESSAGE DelegatingStreamConnectionProvider - Stopping Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 10:59:14.669
+!MESSAGE Stopped org.springframework.tooling.boot.ls LS process 19000
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:14.671
+!MESSAGE Boot project REMOVED: jpa6a
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 10:59:14.678
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 25512
+
+!ENTRY org.eclipse.lsp4e 4 0 2024-05-22 10:59:24.644
+!MESSAGE LanguageServer not initialized within 10s
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.LanguageServerWrapper.getServerCapabilities(LanguageServerWrapper.java:835)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.capabilitiesComply(LanguageServiceAccessor.java:205)
+	at org.eclipse.lsp4e.LanguageServiceAccessor.getStartedWrappers(LanguageServiceAccessor.java:415)
+	at org.eclipse.lsp4e.LanguageServers$LanguageServerProjectExecutor.getServers(LanguageServers.java:340)
+	at org.eclipse.lsp4e.LanguageServers.executeOnServers(LanguageServers.java:437)
+	at org.eclipse.lsp4e.LanguageServers.computeFirst(LanguageServers.java:172)
+	at org.eclipse.lsp4e.LanguageServers.computeFirst(LanguageServers.java:148)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:29)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 10:59:25.253
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 10:59:25.620
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 10:59:25.624
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 10:59:26.055
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 10:59:26.068
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 10:59:28.059
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 10:59:28.063
+!MESSAGE TimeoutException
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:31)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:58.079
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:58.188
+!MESSAGE Boot project ADDED: jpa6e
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 10:59:59.899
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:00:01.943
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:00:02.256
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:00:02.274
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:00:02.772
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:00:02.813
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:00:02.866
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:00:02.875
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:00:04.742
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:00:04.774
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:00:04.810
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:00:04.846
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:00:04.848
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:00:05.255
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:00:05.300
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:00:05.301
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:02:44.861
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:02:44.865
+!MESSAGE Boot project REMOVED: jpa6e
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:02:47.844
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:02:48.095
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:02:48.114
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:02:48.385
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:02:48.387
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:02:48.397
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:02:48.398
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:03:14.223
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:03:14.312
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:03:14.314
+!MESSAGE Boot project ADDED: jpa6e
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:03:14.335
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:03:16.277
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:03:22.644
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:03:22.742
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:03:23.150
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:03:23.185
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:03:25.442
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:03:25.518
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:03:25.519
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:03:25.599
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:03:25.624
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:03:25.644
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:09:53.054
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:09:53.062
+!MESSAGE Boot project ADDED: mybatis5
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:09:58.047
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:09:58.564
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:09:58.580
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:09:58.965
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:09:59.018
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:09:59.019
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:09:59.047
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:10:50.670
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:10:50.703
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:10:50.712
+!MESSAGE Boot project REMOVED: mybatis5
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:10:50.785
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:13:42.434
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:13:42.475
+!MESSAGE Boot project ADDED: mybatis5
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:13:46.640
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:13:47.002
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:13:47.032
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:13:47.360
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:13:47.393
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:13:47.394
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:13:47.414
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:16:27.326
+!MESSAGE Classpath changed for project: mybatis5
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:16:27.338
+!MESSAGE Boot project REMOVED: mybatis5
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:16:27.342
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:16:27.343
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-05-22 11:18:19.225
+!MESSAGE Classpath changed for project: jpa6e
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:18:22.886
+!MESSAGE [Info]	ESLint server running in node v18.18.2
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:18:23.296
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:18:23.327
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:18:23.621
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:18:23.670
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2024-05-22 11:18:23.671
+!MESSAGE executing callback sts4.classpath.WPXJdzKU FAILED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2024-05-22 11:18:23.672
+!MESSAGE No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+!STACK 0
+java.lang.UnsupportedOperationException: No language server has registered to handle command 'sts4.classpath.WPXJdzKU'
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.lambda$1(LSP4ECommandExecutor.java:32)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at org.springframework.tooling.ls.eclipse.commons.LSP4ECommandExecutor.executeClientCommand(LSP4ECommandExecutor.java:32)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.flush(SendClasspathNotificationsJob.java:178)
+	at org.springframework.tooling.jdt.ls.commons.classpath.SendClasspathNotificationsJob.run(SendClasspathNotificationsJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:19:31.949
+!MESSAGE [Info]	Using Typescript version (user-setting) 5.2.2 from path "C:\JAVA\sts-4.21.0.RELEASE\plugins\org.eclipse.wildwebdeveloper_1.1.4.202311211923\node_modules\typescript\lib\tsserver.js"
+
+!ENTRY org.eclipse.lsp4e 1 0 2024-05-22 11:19:31.965
+!MESSAGE [Info]	Typescript Server version info: {version=5.2.2, source=user-setting}
